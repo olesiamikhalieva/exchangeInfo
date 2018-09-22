@@ -1,0 +1,45 @@
+// 20180922151734
+// http://api.openweathermap.org/data/2.5/weather?q=dnipro&units=metric&appid=259ed2e03585b4c9c3b924564ecbeddd
+
+{
+  "coord": {
+    "lon": 35.04,
+    "lat": 48.47
+  },
+  "weather": [
+    {
+      "id": 800,
+      "main": "Clear",
+      "description": "clear sky",
+      "icon": "01d"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": 30,
+    "pressure": 1017,
+    "humidity": 28,
+    "temp_min": 30,
+    "temp_max": 30
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 3,
+    "deg": 210
+  },
+  "clouds": {
+    "all": 0
+  },
+  "dt": 1537617600,
+  "sys": {
+    "type": 1,
+    "id": 7351,
+    "message": 0.0028,
+    "country": "UA",
+    "sunrise": 1537586806,
+    "sunset": 1537630634
+  },
+  "id": 709930,
+  "name": "Dnipro",
+  "cod": 200
+}
