@@ -5,8 +5,9 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -15,8 +16,10 @@ public class JsonService {
     WeatherService weatherService;
 
     public JSONObject createJsonObjFromWeatherDTOresponse(){
-        JSONObject obj = new JSONObject();
+        JSONObject mainObj = new JSONObject();
+        List<JSONObject> jsonObjectList = new ArrayList<>();
         for (WeatherDTOresponse weatherDTOresponse : weatherService.getWeatherDTOresponseListFromDB()) {
+            JSONObject obj = new JSONObject();
             obj.put("nameCity",weatherDTOresponse.getNameCity());
             obj.put("pressure",weatherDTOresponse.getPressure());
             obj.put("tempMin",weatherDTOresponse.getTempMin());
@@ -32,7 +35,9 @@ public class JsonService {
             obj2.putAll(map);
             jsonArray.add(obj2);
             obj.put("CloudWeather", jsonArray);
+            jsonObjectList.add(obj);
         }
-        return obj;
+        mainObj.put("Weather", jsonObjectList);
+        return mainObj;
     }
 }

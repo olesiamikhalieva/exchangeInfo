@@ -16,6 +16,7 @@ public class WeatherRestController {
 
     @GetMapping("/weather")
     public List<WeatherDTOresponse> getWeather() {
+
         weatherService.addWeatherEntityToDB();
         return weatherService.getWeatherDTOresponseListFromDB();
     }
