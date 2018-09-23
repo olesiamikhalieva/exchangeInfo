@@ -5,11 +5,7 @@
     <title>Welcome</title>
 </head>
 <body>
-<h1>Welcome</h1>
-<h2>${weatherList}</h2>
-<c:forEach var="weather" items="${weatherList}">
-    <p>${weather.nameCity}</p>
-</c:forEach>
+<h1>My Json</h1>
+<h4>${weatherJson}</h4>
 </body>
-
 </html>

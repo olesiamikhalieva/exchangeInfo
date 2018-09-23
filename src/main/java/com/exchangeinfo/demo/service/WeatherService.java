@@ -6,13 +6,13 @@ import com.exchangeinfo.demo.dao.repository.WeatherRepository;
 import com.exchangeinfo.demo.dto.WeatherDTO;
 import com.exchangeinfo.demo.dto.WeatherDTOresponse;
 import lombok.extern.log4j.Log4j2;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 @Log4j2
